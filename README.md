@@ -1,4 +1,4 @@
-# packageName
+# tslx
 
 [![npm version][npm-version-src]][npm-version-href]
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
@@ -15,23 +15,29 @@ Install package:
 
 ```sh
 # npm
-npm install packageName
+npm install tslx
 
 # yarn
-yarn add packageName
+yarn add tslx
 
 # pnpm
-pnpm install packageName
+pnpm install tslx
 ```
 
 Import:
 
 ```js
 // ESM
-import {} from "packageName";
+import {} from "tslx";
 
 // CommonJS
-const {} = require("packageName");
+const { cls } = require("tslx");
+
+cls("foo", "bar", {
+  "text-white": true,
+  "bg-red": false,
+});
+// => "foo bar text-white"
 ```
 
 ## Development
@@ -50,15 +56,15 @@ Published under [MIT License](./LICENSE).
 
 <!-- Badges -->
 
-[npm-version-src]: https://img.shields.io/npm/v/packageName?style=flat&colorA=18181B&colorB=F0DB4F
-[npm-version-href]: https://npmjs.com/package/packageName
-[npm-downloads-src]: https://img.shields.io/npm/dm/packageName?style=flat&colorA=18181B&colorB=F0DB4F
-[npm-downloads-href]: https://npmjs.com/package/packageName
-[codecov-src]: https://img.shields.io/codecov/c/gh/unjs/packageName/main?style=flat&colorA=18181B&colorB=F0DB4F
-[codecov-href]: https://codecov.io/gh/unjs/packageName
-[bundle-src]: https://img.shields.io/bundlephobia/minzip/packageName?style=flat&colorA=18181B&colorB=F0DB4F
-[bundle-href]: https://bundlephobia.com/result?p=packageName
-[license-src]: https://img.shields.io/github/license/unjs/packageName.svg?style=flat&colorA=18181B&colorB=F0DB4F
-[license-href]: https://github.com/unjs/packageName/blob/main/LICENSE
+[npm-version-src]: https://img.shields.io/npm/v/tslx?style=flat&colorA=18181B&colorB=F0DB4F
+[npm-version-href]: https://npmjs.com/package/tslx
+[npm-downloads-src]: https://img.shields.io/npm/dm/tslx?style=flat&colorA=18181B&colorB=F0DB4F
+[npm-downloads-href]: https://npmjs.com/package/tslx
+[codecov-src]: https://img.shields.io/codecov/c/gh/unjs/tslx/main?style=flat&colorA=18181B&colorB=F0DB4F
+[codecov-href]: https://codecov.io/gh/unjs/tslx
+[bundle-src]: https://img.shields.io/bundlephobia/minzip/tslx?style=flat&colorA=18181B&colorB=F0DB4F
+[bundle-href]: https://bundlephobia.com/result?p=tslx
+[license-src]: https://img.shields.io/github/license/unjs/tslx.svg?style=flat&colorA=18181B&colorB=F0DB4F
+[license-href]: https://github.com/unjs/tslx/blob/main/LICENSE
 [jsdocs-src]: https://img.shields.io/badge/jsDocs.io-reference-18181B?style=flat&colorA=18181B&colorB=F0DB4F
-[jsdocs-href]: https://www.jsdocs.io/package/packageName
+[jsdocs-href]: https://www.jsdocs.io/package/tslx

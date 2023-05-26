@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { cls, unit_f } from "../src";
+import { cls, style, unit_f } from "../src";
 
 describe("tslx", () => {
   it("test classnames", () => {
@@ -18,5 +18,14 @@ describe("tslx", () => {
     expect(unit_f("1rem")).toBe("1rem");
     expect(unit_f("1px", "rem")).toBe("1px");
     expect(unit_f("1rem", "%")).toBe("1rem");
+  });
+
+  it("test style", () => {
+    expect(style({
+      color: "red",
+      fontSize: "1rem",
+      margin: 0,
+      padding: "1rem"
+    })).toBe("color: red; font-size: 1rem; margin: 0; padding: 1rem;");
   });
 });

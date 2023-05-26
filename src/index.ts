@@ -1,4 +1,4 @@
-import type { Properties, PropertiesHyphen } from "csstype";
+import type * as CSS from "csstype";
 
 function trimClassName(className: string) {
   return className.trim().split(/\s+/);
@@ -45,7 +45,7 @@ export function style(stylesheet: CSSProperties) {
   }, []).join(" ");
 }
 
-export interface CSSProperties extends Properties<string | number>, PropertiesHyphen<string | number> {
+export interface CSSProperties extends CSS.Properties<string | number>, CSS.PropertiesHyphen<string | number> {
 }
 
 export type ClassName =

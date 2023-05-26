@@ -28,12 +28,14 @@
     "release": "pnpm test && changelogen --release && npm publish --registry=https://registry.npmjs.org  && git push --follow-tags",
     "test": "pnpm lint && vitest run --coverage"
   },
+  "dependencies": {
+    "csstype": "^3.1.2"
+  },
   "devDependencies": {
     "@curev/eslint-config": "^0.0.9",
     "@vitest/coverage-c8": "^0.30.1",
     "bumpp": "^9.1.0",
     "changelogen": "^0.5.3",
-    "csstype": "^3.1.2",
     "eslint": "^8.39.0",
     "prettier": "^2.8.8",
     "typescript": "^5.0.4",

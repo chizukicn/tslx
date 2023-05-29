@@ -60,11 +60,11 @@ Published under [MIT License](./LICENSE).
 [npm-version-href]: https://npmjs.com/package/tslx
 [npm-downloads-src]: https://img.shields.io/npm/dm/tslx?style=flat&colorA=18181B&colorB=F0DB4F
 [npm-downloads-href]: https://npmjs.com/package/tslx
-[codecov-src]: https://img.shields.io/codecov/c/gh/unjs/tslx/main?style=flat&colorA=18181B&colorB=F0DB4F
-[codecov-href]: https://codecov.io/gh/unjs/tslx
+[codecov-src]: https://img.shields.io/codecov/c/gh/chizukicn/tslx/main?style=flat&colorA=18181B&colorB=F0DB4F
+[codecov-href]: https://codecov.io/gh/chizukicn/tslx
 [bundle-src]: https://img.shields.io/bundlephobia/minzip/tslx?style=flat&colorA=18181B&colorB=F0DB4F
 [bundle-href]: https://bundlephobia.com/result?p=tslx
-[license-src]: https://img.shields.io/github/license/unjs/tslx.svg?style=flat&colorA=18181B&colorB=F0DB4F
-[license-href]: https://github.com/unjs/tslx/blob/main/LICENSE
+[license-src]: https://img.shields.io/github/license/chizukicn/tslx.svg?style=flat&colorA=18181B&colorB=F0DB4F
+[license-href]: https://github.com/chizukicn/tslx/blob/main/LICENSE
 [jsdocs-src]: https://img.shields.io/badge/jsDocs.io-reference-18181B?style=flat&colorA=18181B&colorB=F0DB4F
 [jsdocs-href]: https://www.jsdocs.io/package/tslx

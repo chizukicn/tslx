@@ -38,7 +38,7 @@ describe("tslx", () => {
   it("test each", () => {
     expect(each(5, (item) => item)).toEqual([1, 2, 3, 4, 5]);
     expect(each([0, 1, 2, 3], (_, index) => index)).toEqual([0, 1, 2, 3]);
-    expect(each("abc", (_, index) => index)).toEqual([0, 1, 2]);
+    expect(each("abc", (s) => s)).toEqual(["a", "b", "c"]);
     expect(each({ a: 1, b: 2, c: 3 }, (item, key) => `${item}-${key}`)).toEqual(["1-a", "2-b", "3-c"]);
   });
 });

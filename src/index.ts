@@ -79,8 +79,6 @@ export function range<T>(min: number | Iterable<T>, max?: number): T[] | number[
   return Array.from(min);
 }
 
-export function renderList<T, U>(source: T, render: <K extends keyof T>(item: T[K], key: T[K], index: number) => U): U[];
-
 export function renderList<U>(source: string, render: (item: string, index: number) => U): U[];
 
 export function renderList<T, U>(source: T[], render: (item: T, index: number) => U): U[];
@@ -88,6 +86,8 @@ export function renderList<T, U>(source: T[], render: (item: T, index: number) =
 export function renderList<T, U>(source: Iterable<T>, render: (item: T, index: number) => U): U[];
 
 export function renderList<U>(source: number, render: (item: number, index: number) => U): U[];
+
+export function renderList<T, U>(source: T, render: <K extends keyof T>(item: T[K], key: T[K], index: number) => U): U[];
 
 export function renderList(source: any, render: (...args: any[]) => any) {
   if (Array.isArray(source)) {

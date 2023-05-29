@@ -1,6 +1,19 @@
 # Changelog
 
 
+## v0.0.3
+
+[compare changes](https://github.com/chizukicn/tslx/compare/v0.0.2...v0.0.3)
+
+
+### 🚀 Enhancements
+
+  - Add each function ([668f36b](https://github.com/chizukicn/tslx/commit/668f36b))
+
+### ❤️  Contributors
+
+- Chizukicn <chizukicn@outlook.com>
+
 ## v0.0.2
 
 

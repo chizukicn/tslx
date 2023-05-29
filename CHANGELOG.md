@@ -1,6 +1,24 @@
 # Changelog
 
 
+## v0.0.4
+
+[compare changes](https://github.com/chizukicn/tslx/compare/v0.0.3...v0.0.4)
+
+
+### 🩹 Fixes
+
+  - Sort *each* types. ([a3f5ad5](https://github.com/chizukicn/tslx/commit/a3f5ad5))
+
+### 🏡 Chore
+
+  - Perf code. ([3c863d8](https://github.com/chizukicn/tslx/commit/3c863d8))
+  - Add git hooks. ([48a2cc0](https://github.com/chizukicn/tslx/commit/48a2cc0))
+
+### ❤️  Contributors
+
+- Chizukicn <chizukicn@outlook.com>
+
 ## v0.0.3
 
 [compare changes](https://github.com/chizukicn/tslx/compare/v0.0.2...v0.0.3)

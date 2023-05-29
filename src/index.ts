@@ -97,7 +97,10 @@ export function renderList(source: any, render: (...args: any[]) => any) {
   } else if (isIterable(source)) {
     return Array.from(source).map(render);
   }
-  return Object.keys(source).map((key, index) => render(source[key], key, index));
+  if (typeof source === "object" && source !== null) {
+    return Object.keys(source).map((key, index) => render(source[key], key, index));
+  }
+  return [];
 }
 
 export const each = renderList;

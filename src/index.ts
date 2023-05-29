@@ -56,3 +56,50 @@ export type ClassName =
   | ClassName[];
 
 export type StyleUnit = "px" | "rem" | "em" | "vw" | "vh" | "vmin" | "vmax" | "%" | "cm" | "mm" | "in" | "pt" | "pc";
+
+function isIterable<T>(obj: any): obj is Iterable<T> {
+  return obj && typeof obj[Symbol.iterator] === "function";
+}
+
+export function range(source: string): string[];
+
+export function range<T>(iterable: Iterable<T>): T[];
+
+export function range(min: number, max: number): number[];
+
+export function range(max: number): number[];
+
+export function range<T>(min: number | Iterable<T>, max?: number): T[] | number[] | string[] {
+  if (typeof min === "number") {
+    if (typeof max === "number") {
+      return Array.from({ length: max - min }, (_, index) => index + min);
+    }
+    return Array.from({ length: min }, (_, index) => index);
+  }
+  return Array.from(min);
+}
+
+export function renderList<T, U>(source: T, render: <K extends keyof T>(item: T[K], key: T[K], index: number) => U): U[];
+
+export function renderList<U>(source: string, render: (item: string, index: number) => U): U[];
+
+export function renderList<T, U>(source: T[], render: (item: T, index: number) => U): U[];
+
+export function renderList<T, U>(source: Iterable<T>, render: (item: T, index: number) => U): U[];
+
+export function renderList<U>(source: number, render: (item: number, index: number) => U): U[];
+
+export function renderList(source: any, render: (...args: any[]) => any) {
+  if (Array.isArray(source)) {
+    return source.map(render);
+  } else if (typeof source === "number") {
+    return range(1, source + 1).map(render);
+  } else if (typeof source === "string") {
+    return range(source).map(render);
+  } else if (isIterable(source)) {
+    return Array.from(source).map(render);
+  }
+  return Object.keys(source).map((key, index) => render(source[key], key, index));
+}
+
+export const each = renderList;

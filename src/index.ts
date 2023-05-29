@@ -94,8 +94,6 @@ export function renderList(source: any, render: (...args: any[]) => any) {
     return source.map(render);
   } else if (typeof source === "number") {
     return range(1, source + 1).map(render);
-  } else if (typeof source === "string") {
-    return range(source).map(render);
   } else if (isIterable(source)) {
     return Array.from(source).map(render);
   }

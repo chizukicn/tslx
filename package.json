@@ -22,6 +22,7 @@
   "scripts": {
     "build": "unbuild",
     "dev": "vitest dev",
+    "coverage": "vitest run --coverage",
     "lint": "eslint --cache --ext .ts,.js,.mjs,.cjs .",
     "lint:fix": "eslint --cache --ext .ts,.js,.mjs,.cjs . --fix",
     "prepack": "pnpm run build",

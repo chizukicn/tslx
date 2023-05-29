@@ -28,10 +28,10 @@ Import:
 
 ```js
 // ESM
-import {} from "tslx";
+import { cls } from "tslx";
 
 // CommonJS
-const { cls } = require("tslx");
+// const { cls } = require("tslx");
 
 cls("foo", "bar", {
   "text-white": true,

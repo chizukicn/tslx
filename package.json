@@ -30,7 +30,7 @@
     "preinstall": "npx only-allow pnpm",
     "release": "pnpm test && changelogen --release && npm publish --registry=https://registry.npmjs.org  && git push --follow-tags",
     "test": "pnpm lint && vitest run --coverage",
-    "bench": "pnpm -C bench start"
+    "bench": "pnpm -C bench install && pnpm -C bench start"
   },
   "dependencies": {
     "csstype": "^3.1.2"

@@ -1,16 +1,15 @@
 {
   "private": true,
   "scripts": {
-    "start":"tsx ./index.ts"
+    "start": "tsx ./index.ts"
   },
   "devDependencies": {
     "benchmark": "^2.1.4",
     "classcat": "^3.2.5",
     "classnames": "^2.2.6",
     "clsx": "1.1.0",
-    "tslx":"0.0.5"
-  },
-  "dependencies": {
+    "tslx": "0.0.5",
+    "tsx": "^3.12.7",
     "consola": "^3.1.0"
   }
 }

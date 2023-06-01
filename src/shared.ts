@@ -14,7 +14,7 @@ export function isNumber(obj: any): obj is number {
   return typeof obj === "number";
 }
 
-export function isArray<T>(obj: any): obj is T[] {
+export function isArray(obj: any): obj is any[] {
   return Array.isArray(obj);
 }
 

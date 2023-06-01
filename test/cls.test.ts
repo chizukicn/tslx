@@ -8,5 +8,5 @@ test("test classnames", () => {
   }, "baz", ["p-4 foo  m-3", {
     absolute: true,
     relative: false
-  }]).join(" ")).toBe("foo baz p-4 m-3 absolute");
+  }], null, undefined, NaN)).toBe("foo baz p-4 foo  m-3 absolute");
 });

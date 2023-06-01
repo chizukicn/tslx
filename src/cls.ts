@@ -1,20 +1,29 @@
-import { isArray, isObject, isString, unique } from "./shared";
+import { isArray, isNumber, isObject, isString } from "./shared";
 
 /**
  *
  */
-export function classnames(...literals: ClassName[]) {
-  return unique(literals
-    .reduce<string[]>((prev, cur) => {
-      if (isArray(cur)) {
-        prev.push(...classnames(...cur));
-      } else if (isString(cur)) {
-        prev.push(...cur.trim().split(/\s+/));
-      } else if (isObject(cur)) {
-        prev.push(...Object.keys(cur).filter((key) => !!cur[key]));
+export function classnames(...literals: ClassName[]): string {
+  return literals
+    .reduce<string>((prev, cur) => {
+      if (cur) {
+        if (isString(cur) || isNumber(cur)) {
+          prev = prev && `${prev} `;
+          prev = prev.concat(String(cur));
+        } else if (isArray(cur)) {
+          prev = prev && `${prev} `;
+          prev = prev.concat(classnames(...cur));
+        } else if (isObject(cur)) {
+          for (const key in cur) {
+            if (cur[key]) {
+              prev = prev && `${prev} `;
+              prev = prev.concat(key);
+            }
+          }
+        }
       }
       return prev;
-    }, [])).filter((item) => !!item);
+    }, "");
 }
 
 /**
@@ -23,8 +32,9 @@ export function classnames(...literals: ClassName[]) {
 export const cls = classnames;
 
 export type ClassName =
-  | Record<string, boolean | undefined | null>
+  | Record<string, any>
   | string
+  | number
   | undefined
   | null
   | ClassName[];

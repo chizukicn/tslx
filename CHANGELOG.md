@@ -1,6 +1,26 @@
 # Changelog
 
 
+## v0.0.6
+
+[compare changes](https://github.com/chizukicn/tslx/compare/v0.0.5...v0.0.6)
+
+
+### 🚀 Enhancements
+
+  - Performance optimization. ([15affae](https://github.com/chizukicn/tslx/commit/15affae))
+
+### 🏡 Chore
+
+  - Update README.md ([c42c3cc](https://github.com/chizukicn/tslx/commit/c42c3cc))
+  - Split code. ([57e16d3](https://github.com/chizukicn/tslx/commit/57e16d3))
+  - Add tsx deps. ([e087e74](https://github.com/chizukicn/tslx/commit/e087e74))
+  - Fix bench scripts. ([17663ad](https://github.com/chizukicn/tslx/commit/17663ad))
+
+### ❤️  Contributors
+
+- Chizukicn <chizukicn@outlook.com>
+
 ## v0.0.5
 
 [compare changes](https://github.com/chizukicn/tslx/compare/v0.0.4...v0.0.5)

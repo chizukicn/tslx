@@ -1,6 +1,19 @@
 # Changelog
 
 
+## v0.0.7
+
+[compare changes](https://github.com/chizukicn/tslx/compare/v0.0.6...v0.0.7)
+
+
+### 🚀 Enhancements
+
+  - Cls support iterable. ([8da72a4](https://github.com/chizukicn/tslx/commit/8da72a4))
+
+### ❤️  Contributors
+
+- Chizukicn <chizukicn@outlook.com>
+
 ## v0.0.6
 
 [compare changes](https://github.com/chizukicn/tslx/compare/v0.0.5...v0.0.6)

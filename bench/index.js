@@ -1,10 +1,10 @@
-import { Suite } from "benchmark";
-import classnames from "classnames";
-import classcat from "classcat";
-import clsx from "clsx";
-import consola from "consola";
-import { cls as old } from "tslx";
-import { cls } from "../dist/index.cjs";
+const { Suite } = require("benchmark");
+const classnames = require("classnames");
+const classcat = require("classcat/dist/classcat.js");
+const clsx = require("clsx");
+const consola = require("consola");
+const { cls: old } = require("tslx");
+const { cls } = require("../dist/index.cjs");
 
 function bench(name, ...args) {
   consola.log(`\n# ${name}`);

@@ -1,4 +1,4 @@
-import { isArray, isNumber, isObject, isString } from "./shared";
+import { isIterable, isNumber, isObject, isString } from "./shared";
 
 /**
  *
@@ -10,7 +10,7 @@ export function classnames(...literals: ClassName[]): string {
         if (isString(cur) || isNumber(cur)) {
           prev = prev && `${prev} `;
           prev = prev.concat(String(cur));
-        } else if (isArray(cur)) {
+        } else if (isIterable(cur)) {
           prev = prev && `${prev} `;
           prev = prev.concat(classnames(...cur));
         } else if (isObject(cur)) {
@@ -37,4 +37,4 @@ export type ClassName =
   | number
   | undefined
   | null
-  | ClassName[];
+  | Iterable<ClassName>;

@@ -9,4 +9,11 @@ test("test classnames", () => {
     absolute: true,
     relative: false
   }], null, undefined, NaN)).toBe("foo baz p-4 foo  m-3 absolute");
+
+  expect(cls(new Set([
+    "foo",
+    "bar",
+    "baz",
+    "bar"
+  ]))).toBe("foo bar baz");
 });

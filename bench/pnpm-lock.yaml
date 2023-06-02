@@ -1,6 +1,12 @@
 lockfileVersion: '6.0'
 
 devDependencies:
+  '@types/benchmark':
+    specifier: ^2.1.2
+    version: 2.1.2
+  '@types/classnames':
+    specifier: ^2.3.1
+    version: 2.3.1
   benchmark:
     specifier: ^2.1.4
     version: 2.1.4
@@ -17,8 +23,8 @@ devDependencies:
     specifier: ^3.1.0
     version: 3.1.0
   tslx:
-    specifier: 0.0.5
-    version: 0.0.5
+    specifier: 0.0.6
+    version: 0.0.6
   tsx:
     specifier: ^3.12.7
     version: 3.12.7
@@ -244,6 +250,17 @@ packages:
     dev: true
     optional: true
 
+  /@types/benchmark@2.1.2:
+    resolution: {integrity: sha512-EDKtLYNMKrig22jEvhXq8TBFyFgVNSPmDF2b9UzJ7+eylPqdZVo17PCUMkn1jP6/1A/0u78VqYC6VrX6b8pDWA==}
+    dev: true
+
+  /@types/classnames@2.3.1:
+    resolution: {integrity: sha512-zeOWb0JGBoVmlQoznvqXbE0tEC/HONsnoUNH19Hc96NFsTAwTXbTqb8FMYkru1F/iqp7a18Ws3nWJvtA1sHD1A==}
+    deprecated: This is a stub types definition. classnames provides its own type definitions, so you do not need this installed.
+    dependencies:
+      classnames: 2.2.6
+    dev: true
+
   /benchmark@2.1.4:
     resolution: {integrity: sha512-l9MlfN4M1K/H2fbhfMy3B7vJd6AGKJVQn2h6Sg/Yx+KckoUA7ewS5Vv6TjSq18ooE1kS9hhAlQRH3AkXIh/aOQ==}
     dependencies:
@@ -344,8 +361,8 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
-  /tslx@0.0.5:
-    resolution: {integrity: sha512-jk3l/HKUfnfvPp9paacMZ2HyK6jtmR1+yWeM0v3NQMdsDTlGflA8+rqtPHDT4RPWw2RughCDrDMLUeqLb8cG2A==}
+  /tslx@0.0.6:
+    resolution: {integrity: sha512-9xgGGHcbMXBQ+8BHjy4wfbKmsGnnLCJ5gt73L5ZX1uVlngdL5+dmxnIAp3lzBI5j2trS0y9EHJp518eZ4BV1ZA==}
     requiresBuild: true
     dependencies:
       csstype: 3.1.2

@@ -17,3 +17,4 @@ test("test classnames", () => {
     "bar"
   ]))).toBe("foo bar baz");
 });
+

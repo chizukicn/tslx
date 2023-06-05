@@ -29,7 +29,7 @@
     "prepare": "npx simple-git-hooks",
     "preinstall": "npx only-allow pnpm",
     "release": "pnpm test && changelogen --release",
-    "publish": "npm publish --registry https://registry.npmjs.org/",
+    "pub": "npm publish --registry https://registry.npmjs.org/",
     "test": "pnpm lint && vitest run --coverage",
     "bench": "vitest bench"
   },

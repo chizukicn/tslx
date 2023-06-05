@@ -37,22 +37,22 @@
     "csstype": "^3.1.2"
   },
   "devDependencies": {
-    "@curev/eslint-config": "^0.0.9",
-    "@vitest/coverage-c8": "^0.30.1",
+    "@curev/eslint-config": "^0.0.10",
+    "@vitest/coverage-c8": "^0.31.4",
     "bumpp": "^9.1.0",
     "changelogen": "^0.5.3",
     "classcat": "^5.0.4",
     "classnames": "^2.3.2",
     "clsx": "^1.2.1",
-    "eslint": "^8.39.0",
+    "eslint": "^8.42.0",
     "lint-staged": "^13.2.2",
     "prettier": "^2.8.8",
     "simple-git-hooks": "^2.8.1",
-    "typescript": "^5.0.4",
+    "typescript": "^5.1.3",
     "unbuild": "^1.2.1",
-    "vitest": "^0.30.1"
+    "vitest": "^0.31.4"
   },
-  "packageManager": "pnpm@8.5.0",
+  "packageManager": "pnpm@8.6.0",
   "simple-git-hooks": {
     "pre-commit": "npx lint-staged"
   },

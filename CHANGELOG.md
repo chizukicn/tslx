@@ -1,6 +1,19 @@
 # Changelog
 
 
+## v0.0.9
+
+[compare changes](https://github.com/chizukicn/tslx/compare/v0.0.8...v0.0.9)
+
+
+### 🩹 Fixes
+
+  - Unexport mitt function. ([5cebf21](https://github.com/chizukicn/tslx/commit/5cebf21))
+
+### ❤️  Contributors
+
+- Chizukicn <chizukicn@outlook.com>
+
 ## v0.0.8
 
 [compare changes](https://github.com/chizukicn/tslx/compare/v0.0.7...v0.0.8)

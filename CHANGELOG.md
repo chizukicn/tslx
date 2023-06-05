@@ -1,6 +1,19 @@
 # Changelog
 
 
+## v0.0.8
+
+[compare changes](https://github.com/chizukicn/tslx/compare/v0.0.7...v0.0.8)
+
+
+### 🚀 Enhancements
+
+  - Add mitt function. ([b5a3797](https://github.com/chizukicn/tslx/commit/b5a3797))
+
+### ❤️  Contributors
+
+- Chizukicn <chizukicn@outlook.com>
+
 ## v0.0.7
 
 [compare changes](https://github.com/chizukicn/tslx/compare/v0.0.6...v0.0.7)

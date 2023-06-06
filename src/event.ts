@@ -2,25 +2,25 @@ export type EventType = string | symbol;
 
 // An event handler can take an optional event argument
 // and should not return a value
-export type Handler<T = unknown> = (event: T) => void;
-export type WildcardHandler<T = Record<string, unknown>> = (
+export type Handler<T extends unknown[]> = (...event: T) => void;
+export type WildcardHandler<T extends Record<EventType, unknown[]>> = (
   type: keyof T,
-  event: T[keyof T]
+  ...event: T[keyof T]
 ) => void;
 
 // An array of all currently registered event handlers for a type
-export type EventHandlerList<T = unknown> = Array<Handler<T>>;
-export type WildCardEventHandlerList<T = Record<string, unknown>> = Array<
+export type EventHandlerList<T extends unknown[]> = Array<Handler<T>>;
+export type WildCardEventHandlerList<T extends Record<EventType, unknown[]>> = Array<
   WildcardHandler<T>
 >;
 
 // A map of event types and their corresponding event handlers.
-export type EventHandlerMap<Events extends Record<EventType, unknown>> = Map<
+export type EventHandlerMap<Events extends Record<EventType, unknown[]>> = Map<
   keyof Events | "*",
   EventHandlerList<Events[keyof Events]> | WildCardEventHandlerList<Events>
 >;
 
-export interface Emitter<Events extends Record<EventType, unknown>> {
+export interface Emitter<Events extends Record<EventType, unknown[]>> {
   all: EventHandlerMap<Events>
 
   on<Key extends keyof Events>(type: Key, handler: Handler<Events[Key]>): this
@@ -32,10 +32,7 @@ export interface Emitter<Events extends Record<EventType, unknown>> {
   ): this
   off(type: "*", handler: WildcardHandler<Events>): this
 
-  emit<Key extends keyof Events>(type: Key, event: Events[Key]): this
-  emit<Key extends keyof Events>(
-    type: undefined extends Events[Key] ? Key : never
-  ): this
+  emit<Key extends keyof Events>(type: Key, ...event: Events[Key]): this
 }
 
 /**
@@ -45,13 +42,13 @@ export interface Emitter<Events extends Record<EventType, unknown>> {
  * @name mitt
  * @returns {Emitter}
  */
-export function mitt<Events extends Record<EventType, unknown>>(
+export function mitt<Events extends Record<EventType, unknown[]>>(
   source?: EventHandlerMap<Events>
 ): Emitter<Events> {
   type GenericEventHandler =
     | Handler<Events[keyof Events]>
     | WildcardHandler<Events>;
-  const all = source ?? new Map();
+  const all = source ?? new Map<EventType, EventHandlerList<Events[keyof Events]>>();
 
   return {
     /**
@@ -104,12 +101,12 @@ export function mitt<Events extends Record<EventType, unknown>>(
      * @param {Any} [evt] Any value (object is recommended and powerful), passed to each handler
      * @memberOf mitt
      */
-    emit<Key extends keyof Events>(this: Emitter<Events>, type: Key, evt?: Events[Key]) {
+    emit<Key extends keyof Events>(this: Emitter<Events>, type: Key, ...evt: Events[Key]) {
       let handlers = all.get(type);
       if (handlers) {
         (handlers as EventHandlerList<Events[keyof Events]>).forEach(
           (handler) => {
-            handler(evt!);
+            handler(...evt);
           }
         );
       }
@@ -117,7 +114,7 @@ export function mitt<Events extends Record<EventType, unknown>>(
       handlers = all.get("*");
       if (handlers) {
         (handlers as WildCardEventHandlerList<Events>).forEach((handler) => {
-          handler(type, evt!);
+          handler(type, ...evt);
         });
       }
       return this;

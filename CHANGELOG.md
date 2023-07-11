@@ -1,6 +1,24 @@
 # Changelog
 
 
+## v0.0.10
+
+[compare changes](https://github.com/chizukicn/tslx/compare/v0.0.9...v0.0.10)
+
+
+### 🚀 Enhancements
+
+  - **event:** Support multiple args. ([ad7a73c](https://github.com/chizukicn/tslx/commit/ad7a73c))
+  - **events:** Add off function return with on. ([8f9cc3d](https://github.com/chizukicn/tslx/commit/8f9cc3d))
+
+### 🩹 Fixes
+
+  - Mitt emit return type. ([bfe106a](https://github.com/chizukicn/tslx/commit/bfe106a))
+
+### ❤️  Contributors
+
+- Chizukicn <chizukicn@outlook.com>
+
 ## v0.0.9
 
 [compare changes](https://github.com/chizukicn/tslx/compare/v0.0.8...v0.0.9)

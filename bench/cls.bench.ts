@@ -2,7 +2,7 @@ import { bench, describe } from "vitest";
 import classnames from "classnames";
 import clsx from "clsx";
 import classcat from "classcat";
-import { cls } from "../dist/";
+import { cls } from "../dist/index.mjs";
 import pkg from "../package.json";
 function getVersion(dep: string) {
   const version = pkg.dependencies[dep] || pkg.devDependencies[dep];

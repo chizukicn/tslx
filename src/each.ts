@@ -1,5 +1,4 @@
-import { range } from "./range";
-import { isArray, isIterable, isNumber, isObject } from "./shared";
+import { isIterable, isNumber, isObject } from "./shared";
 
 export function renderList<U>(source: string, render: (item: string, index: number) => U): U[];
 
@@ -12,20 +11,28 @@ export function renderList<U>(source: number, render: (item: number, index: numb
 export function renderList<T, U>(source: T, render: <K extends keyof T>(item: T[K], key: T[K], index: number) => U): U[];
 
 export function renderList(source: any, render: (...args: any[]) => any) {
-  if (isArray(source)) {
-    return source.map(render);
+  const result: any[] = [];
+
+  if (isIterable(source)) {
+    let index = 0;
+    for (const item of source) {
+      result.push(render(item, index++));
+    }
   } else if (isNumber(source)) {
-    return range(1, source + 1).map(render);
-  } else if (isIterable(source)) {
-    return Array.from(source).map(render);
+    for (let i = 0; i < source; i++) {
+      result.push(render(i + 1, i));
+    }
+  } else if (isObject(source)) {
+    let index = 0;
+    for (const key in source) {
+      result.push(render(source[key], key, index++));
+    }
   }
-  if (isObject(source)) {
-    return Object.keys(source).map((key, index) => render(source[key], key, index));
-  }
-  return [];
+  return result;
 }
 
 /**
  * @alias renderList
  */
 export const each = renderList;
+

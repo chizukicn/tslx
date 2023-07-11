@@ -3,13 +3,13 @@ import { mitt } from "../src/event";
 
 test("emitter", () => {
   const emitter = mitt();
-  emitter.on("foo", () => {
+  const off = emitter.on("foo", () => {
     expect(true).toBe(true);
   });
 
   emitter.emit("foo");
 
-  emitter.off("foo");
+  off();
 
   expect(emitter.all.size).toBe(0);
 });

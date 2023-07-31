@@ -1,6 +1,6 @@
 {
   "name": "tslx",
-  "version": "0.0.10",
+  "version": "0.1.0",
   "description": "",
   "repository": "chizukicn/tslx",
   "license": "MIT",
@@ -28,7 +28,7 @@
     "prepack": "pnpm run build",
     "prepare": "npx simple-git-hooks",
     "preinstall": "npx only-allow pnpm",
-    "release": "pnpm test && changelogen --release",
+    "release": "pnpm test && bumpp",
     "pub": "npm publish --registry https://registry.npmjs.org/",
     "test": "pnpm lint && vitest run --coverage",
     "bench": "vitest bench"

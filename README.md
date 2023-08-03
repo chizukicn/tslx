@@ -48,6 +48,11 @@ cls("foo", "bar", {
 - Install dependencies using `pnpm install`
 - Run interactive tests using `pnpm dev`
 
+## Acknowledgement
+`tslx` is made possible thanks to the inspirations from the following projects:
+
+- [clsx](https://github.com/lukeed/clsx) A tiny (228B) utility for constructing `className` strings conditionally.
+
 ## License
 
 Made with 💛

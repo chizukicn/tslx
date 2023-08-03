@@ -6,7 +6,7 @@ import { cls } from "../dist/index.mjs";
 import pkg from "../package.json";
 function getVersion(dep: string) {
   const version = pkg.dependencies[dep] || pkg.devDependencies[dep];
-  return version.replace(/[^0-9.]/g, "");
+  return version.replace(/[^\d.]/g, "");
 }
 
 const versions = {
@@ -73,7 +73,7 @@ benchTask(
 benchTask(
   "Mixed (Bad Data)",
   "foo", "bar",
-  undefined, null, NaN,
+  undefined, null, Number.NaN,
   () => { },
   { bax: true, bux: false, 123: true },
   ["baz", { bax: false, bux: true, abc: null }, {}]

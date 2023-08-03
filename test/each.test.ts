@@ -14,7 +14,7 @@ test("test each", () => {
   expect(each("", (item) => item)).toEqual([]);
   expect(each(false, (item) => item)).toEqual([]);
   expect(each(true, (item) => item)).toEqual([]);
-  expect(each(NaN, (item) => item)).toEqual([]);
+  expect(each(Number.NaN, (item) => item)).toEqual([]);
   expect(each(String, (item) => item)).toEqual([]);
   expect(each(Symbol, (item) => item)).toEqual([]);
   expect(each(() => [1, 2, 3, 4], (item) => item)).toEqual([]);

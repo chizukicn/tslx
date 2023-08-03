@@ -9,8 +9,8 @@ export type EventHandlerList<T extends unknown[]> = Array<Handler<T>>;
 
 // A map of event types and their corresponding event handlers.
 export type EventHandlerMap<Events extends Record<EventType, unknown[]>> = Map<
-  keyof Events,
-  EventHandlerList<Events[keyof Events]>
+keyof Events,
+EventHandlerList<Events[keyof Events]>
 >;
 
 export type ListenObject<Events extends Record<EventType, unknown[]>> = Record <keyof Events, Handler<Events[keyof Events]>>;

@@ -8,7 +8,7 @@ test("test classnames", () => {
   }, "baz", ["p-4 foo  m-3", {
     absolute: true,
     relative: false
-  }], null, undefined, NaN)).toBe("foo baz p-4 foo  m-3 absolute");
+  }], null, undefined, Number.NaN)).toBe("foo baz p-4 foo  m-3 absolute");
 
   expect(cls(new Set([
     "foo",

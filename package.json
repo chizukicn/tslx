@@ -42,7 +42,7 @@
     "classcat": "^5.0.4",
     "classnames": "^2.3.2",
     "clsx": "^2.0.0",
-    "eslint": "^8.46.0",
+    "eslint": "^8.47.0",
     "lint-staged": "^13.2.3",
     "simple-git-hooks": "^2.9.0",
     "typescript": "^5.1.6",

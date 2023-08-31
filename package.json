@@ -43,7 +43,7 @@
     "classnames": "^2.3.2",
     "clsx": "^2.0.0",
     "eslint": "^8.48.0",
-    "lint-staged": "^13.3.0",
+    "lint-staged": "^14.0.1",
     "simple-git-hooks": "^2.9.0",
     "typescript": "^5.2.2",
     "unbuild": "^1.2.1",

@@ -1,17 +1,18 @@
 import type * as CSS from "csstype";
 import { isNumber, isString, kebabCase } from "./shared";
 
-export function unitFormat<U extends string = StyleUnit>(value: string | number, unit: U = "px" as U) {
-  if (/^\d+(\.\d+)?$/.test(String(value))) {
-    return `${value}${unit}`;
+export function unitFormat<U extends string = StyleUnit, V extends string | number = string | number>(value: V, unit: U = "px" as U) {
+  const strValue = String(value);
+  if (/^\d+(\.\d+)?$/.test(strValue)) {
+    return `${strValue}${unit}`;
   }
-  return value;
+  return strValue;
 }
 
 // eslint-disable-next-line camelcase
 export const unit_f = unitFormat;
 
-export const createUnitFormat = <U extends string = StyleUnit>(unit: U) => (value: string | number) => unitFormat(value, unit);
+export const createUnitFormat = <U extends string = StyleUnit, V extends string | number = string | number >(unit: U) => (value: V) => unitFormat(value, unit);
 
 export const px = createUnitFormat("px");
 

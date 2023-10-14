@@ -1,5 +1,5 @@
 export function isIterable<T = any>(obj: any): obj is Iterable<T> {
-  return obj && typeof obj[Symbol.iterator] === "function";
+  return !!obj && typeof obj[Symbol.iterator] === "function";
 }
 
 export function isObject(obj: any): obj is Record<string, any> {

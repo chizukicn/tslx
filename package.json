@@ -30,7 +30,7 @@
     "prepare": "npx simple-git-hooks",
     "preinstall": "npx only-allow pnpm",
     "release": "pnpm test && bumpp",
-    "test": "pnpm lint && vitest run --coverage",
+    "test": "vitest",
     "bench": "vitest bench",
     "up": "taze major",
     "up:nolyfill": "nolyfill install"

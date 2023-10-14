@@ -1,5 +1,5 @@
 import { expect, test } from "vitest";
-import { em, percent, px, rem, style, unit_f, vh, vw } from "../src/style";
+import { cssvar, em, percent, px, rem, style, unit_f, vh, vw } from "../src/style";
 
 test("test unit_f", () => {
   expect(unit_f(1)).toBe("1px");
@@ -29,4 +29,5 @@ test("test style", () => {
     margin: 0,
     padding: "1rem"
   })).toBe("color: red; font-size: 1rem; margin: 0; padding: 1rem;");
+  expect(cssvar("foo", "bar")).toBe("--foo: bar;");
 });

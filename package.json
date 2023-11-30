@@ -3,7 +3,7 @@
   "type": "module",
   "version": "0.1.1",
   "packageManager": "pnpm@8.11.0",
-  "description": "",
+  "description": "some tsx utils",
   "license": "MIT",
   "repository": "chizukicn/tslx",
   "sideEffects": false,

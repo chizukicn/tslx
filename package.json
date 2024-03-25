@@ -2,7 +2,7 @@
   "name": "tslx",
   "type": "module",
   "version": "0.1.1",
-  "packageManager": "pnpm@8.14.3",
+  "packageManager": "pnpm@8.15.5",
   "description": "some tsx utils",
   "license": "MIT",
   "repository": "chizukicn/tslx",
@@ -40,20 +40,20 @@
     "csstype": "^3.1.3"
   },
   "devDependencies": {
-    "@curev/eslint-config": "^0.2.2",
-    "@vitest/coverage-v8": "^1.2.2",
-    "bumpp": "^9.3.0",
+    "@curev/eslint-config": "^0.3.6",
+    "@vitest/coverage-v8": "^1.4.0",
+    "bumpp": "^9.4.0",
     "classcat": "^5.0.4",
     "classnames": "^2.5.1",
     "clsx": "^2.1.0",
-    "eslint": "^8.56.0",
-    "lint-staged": "^15.2.0",
-    "nolyfill": "^1.0.27",
-    "simple-git-hooks": "^2.9.0",
-    "taze": "^0.13.1",
-    "typescript": "^5.3.3",
+    "eslint": "^8.57.0",
+    "lint-staged": "^15.2.2",
+    "nolyfill": "^1.0.30",
+    "simple-git-hooks": "^2.11.1",
+    "taze": "^0.13.3",
+    "typescript": "^5.4.3",
     "unbuild": "^2.0.0",
-    "vitest": "^1.2.2"
+    "vitest": "^1.4.0"
   },
   "pnpm": {
     "overrides": {

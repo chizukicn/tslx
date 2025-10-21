@@ -42,7 +42,7 @@
   "devDependencies": {
     "@curev/eslint-config": "^0.2.2",
     "@vitest/coverage-v8": "^1.2.2",
-    "bumpp": "^9.3.0",
+    "bumpp": "^10.3.1",
     "classcat": "^5.0.4",
     "classnames": "^2.5.1",
     "clsx": "^2.1.0",

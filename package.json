@@ -2,7 +2,7 @@
   "name": "tslx",
   "type": "module",
   "version": "0.1.1",
-  "packageManager": "pnpm@8.14.3",
+  "packageManager": "pnpm@10.19.0",
   "description": "some tsx utils",
   "license": "MIT",
   "repository": "chizukicn/tslx",

@@ -1,7 +1,7 @@
-import { expect, test } from "vitest";
+import { expect, it } from "vitest";
 import { cssvar, em, percent, px, rem, style, unit_f, vh, vw } from "../src/style";
 
-test("test unit_f", () => {
+it("test unit_f", () => {
   expect(unit_f(1)).toBe("1px");
   expect(unit_f("1")).toBe("1px");
   expect(unit_f("1rem")).toBe("1rem");
@@ -22,7 +22,7 @@ test("test unit_f", () => {
   expect(percent("1px")).toBe("1px");
 });
 
-test("test style", () => {
+it("test style", () => {
   expect(style({
     color: "red",
     fontSize: "1rem",

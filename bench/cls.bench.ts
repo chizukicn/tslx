@@ -1,9 +1,11 @@
-import { bench, describe } from "vitest";
+import classcat from "classcat";
 import classnames from "classnames";
 import clsx from "clsx";
-import classcat from "classcat";
-import { cls } from "../dist/index.mjs";
+import { bench, describe } from "vitest";
+// eslint-disable-next-line antfu/no-import-dist
+import { cls } from "../dist/index";
 import pkg from "../package.json";
+
 function getVersion(dep: string) {
   const version = pkg.dependencies[dep] || pkg.devDependencies[dep];
   return version.replace(/[^\d.]/g, "");
@@ -16,7 +18,7 @@ const versions = {
   tslx: pkg.version
 };
 
-const benchTask = (name: string, ...args: any[]) => {
+function benchTask(name: string, ...args: any[]) {
   describe(name, () => {
     bench(`tslx(${versions.tslx})`, () => {
       cls(...args);
@@ -34,11 +36,16 @@ const benchTask = (name: string, ...args: any[]) => {
       classcat(args);
     });
   });
-};
+}
 
 benchTask(
   "Strings",
-  "foo", "", "bar", "baz", "bax", "bux"
+  "foo",
+  "",
+  "bar",
+  "baz",
+  "bax",
+  "bux"
 );
 benchTask(
   "Objects",
@@ -65,17 +72,20 @@ benchTask(
 
 benchTask(
   "Mixed",
-  "foo", "bar",
+  "foo",
+  "bar",
   { bax: true, bux: false },
   ["baz", { bax: false, bux: true }]
 );
 
 benchTask(
   "Mixed (Bad Data)",
-  "foo", "bar",
-  undefined, null, Number.NaN,
+  "foo",
+  "bar",
+  undefined,
+  null,
+  Number.NaN,
   () => { },
   { bax: true, bux: false, 123: true },
   ["baz", { bax: false, bux: true, abc: null }, {}]
 );
-

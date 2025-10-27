@@ -35,4 +35,3 @@ export function renderList(source: any, render: (...args: any[]) => any) {
  * @alias renderList
  */
 export const each = renderList;
-

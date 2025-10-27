@@ -36,7 +36,6 @@ it("emitter", () => {
 
   expect(emitter.all.size).toBe(0);
 
-
   emitter.listen({
     foo: () => {
       expect(true).toBe(true);

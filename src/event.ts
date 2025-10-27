@@ -9,24 +9,24 @@ export type EventHandlerList<T extends unknown[]> = Array<Handler<T>>;
 
 // A map of event types and their corresponding event handlers.
 export type EventHandlerMap<Events extends Record<EventType, unknown[]>> = Map<
-keyof Events,
-EventHandlerList<Events[keyof Events]>
+  keyof Events,
+  EventHandlerList<Events[keyof Events]>
 >;
 
 export type ListenObject<Events extends Record<EventType, unknown[]>> = Record <keyof Events, Handler<Events[keyof Events]>>;
 
 export interface Emitter<Events extends Record<EventType, unknown[]>> {
-  all: EventHandlerMap<Events>
+  all: EventHandlerMap<Events>;
 
-  on<Key extends keyof Events>(type: Key, handler: Handler<Events[Key]>): () => void
+  on: <Key extends keyof Events>(type: Key, handler: Handler<Events[Key]>) => () => void;
 
-  once<Key extends keyof Events>(type: Key, handler: Handler<Events[Key]>): () => void
+  once: <Key extends keyof Events>(type: Key, handler: Handler<Events[Key]>) => () => void;
 
-  listen<O extends ListenObject<Events>>(map: O): Record<keyof O, () => void>
+  listen: <O extends ListenObject<Events>>(map: O) => Record<keyof O, () => void>;
 
-  off<Key extends keyof Events>(type: Key, handler?: Handler<Events[Key]>): this
+  off: <Key extends keyof Events>(type: Key, handler?: Handler<Events[Key]>) => this;
 
-  emit<Key extends keyof Events>(type: Key, ...event: Events[Key]): this
+  emit: <Key extends keyof Events>(type: Key, ...event: Events[Key]) => this;
 
 }
 
@@ -35,7 +35,7 @@ export interface Emitter<Events extends Record<EventType, unknown[]>> {
  * Forked from https://github.com/developit/mitt.git
  * @license MIT Jason Miller <https://jasonformat.com>
  * @name mitt
- * @returns {Emitter}
+ * @returns {Emitter} Emitter<Events>
  */
 export function mitt<Events extends Record<EventType, unknown[]>>(
   source?: EventHandlerMap<Events>

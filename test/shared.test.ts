@@ -1,7 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { capitalize, decamelize, isArray, isIterable, isNumber, isObject, isString, kebabCase, snakeCase, unique } from "../src/shared";
 
-
 describe("test shared", () => {
   it("isIterable", () => {
     expect(isIterable([])).toBe(true);

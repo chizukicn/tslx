@@ -43,19 +43,19 @@
   },
   "devDependencies": {
     "@curev/eslint-config": "^0.6.0",
-    "@vitest/coverage-v8": "^4.0.6",
+    "@vitest/coverage-v8": "^4.0.7",
     "bumpp": "^10.3.1",
     "classcat": "^5.0.5",
     "classnames": "^2.5.1",
     "clsx": "^2.1.1",
-    "eslint": "^9.39.0",
+    "eslint": "^9.39.1",
     "lint-staged": "^16.2.6",
     "nolyfill": "^1.0.44",
     "simple-git-hooks": "^2.13.1",
     "taze": "^19.9.0",
-    "tsdown": "^0.15.12",
+    "tsdown": "^0.16.0",
     "typescript": "^5.9.3",
-    "vitest": "^4.0.6"
+    "vitest": "^4.0.7"
   },
   "pnpm": {
     "overrides": {

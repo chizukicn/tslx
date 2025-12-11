@@ -12,4 +12,4 @@ export * from "./slots";
 
 export * from "./style";
 
-export * from "maybe-types";
+export type * from "maybe-types";

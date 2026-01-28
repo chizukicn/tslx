@@ -28,8 +28,6 @@
     "lint:fix": "eslint --cache --ext .ts,.js,.mjs,.cjs . --fix",
     "prepack": "pnpm run build",
     "prepare": "npx simple-git-hooks",
-    "prepublish": "pnpm run build",
-    "preinstall": "npx only-allow pnpm",
     "release": "pnpm test run && bumpp",
     "test": "vitest",
     "typecheck": "tsc --noEmit --skipLibCheck",

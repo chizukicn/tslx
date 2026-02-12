@@ -2,7 +2,7 @@
   "name": "tslx",
   "type": "module",
   "version": "0.3.0",
-  "packageManager": "pnpm@10.28.2",
+  "packageManager": "pnpm@10.29.3",
   "description": "some tsx utils",
   "license": "MIT",
   "repository": "chizukicn/tslx",
@@ -37,7 +37,7 @@
   "devDependencies": {
     "@curev/eslint-config": "^0.6.0",
     "@vitest/coverage-v8": "^4.0.18",
-    "bumpp": "^10.4.0",
+    "bumpp": "^10.4.1",
     "classcat": "^5.0.5",
     "classnames": "^2.5.1",
     "clsx": "^2.1.1",
@@ -46,7 +46,7 @@
     "nolyfill": "^1.0.44",
     "simple-git-hooks": "^2.13.1",
     "taze": "^19.9.2",
-    "tsdown": "^0.20.1",
+    "tsdown": "^0.20.3",
     "typescript": "^5.9.3",
     "vitest": "^4.0.18"
   },

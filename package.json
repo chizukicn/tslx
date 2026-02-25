@@ -41,7 +41,7 @@
     "classcat": "^5.0.5",
     "classnames": "^2.5.1",
     "clsx": "^2.1.1",
-    "eslint": "^9.39.3",
+    "eslint": "^10.0.2",
     "lint-staged": "^16.2.7",
     "nolyfill": "^1.0.44",
     "simple-git-hooks": "^2.13.1",

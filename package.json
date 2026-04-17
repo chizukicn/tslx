@@ -46,7 +46,7 @@
     "nolyfill": "^1.0.44",
     "simple-git-hooks": "^2.13.1",
     "taze": "^19.11.0",
-    "tsdown": "^0.21.7",
+    "tsdown": "^0.21.9",
     "typescript": "^5.9.3",
     "vitest": "^4.1.4"
   },

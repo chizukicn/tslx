@@ -36,7 +36,7 @@
   },
   "devDependencies": {
     "@curev/eslint-config": "^0.6.2",
-    "@vitest/coverage-v8": "^4.1.6",
+    "@vitest/coverage-v8": "^4.1.7",
     "bumpp": "^10.4.1",
     "classcat": "^5.0.5",
     "classnames": "^2.5.1",
@@ -45,10 +45,10 @@
     "lint-staged": "^16.4.0",
     "nolyfill": "^1.0.44",
     "simple-git-hooks": "^2.13.1",
-    "taze": "^19.11.0",
+    "taze": "^19.13.0",
     "tsdown": "^0.22.0",
     "typescript": "^5.9.3",
-    "vitest": "^4.1.6"
+    "vitest": "^4.1.7"
   },
   "pnpm": {
     "overrides": {
